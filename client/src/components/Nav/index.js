@@ -23,8 +23,8 @@ function Nav() {
       );
     } else {
       return (
-        <ul className="flex-row">
-          <li className="mx-1">
+        <ul className="flex-row ">
+          <li className="mx-1 justify-content-between">
             <Link to="/signup">
               Signup
             </Link>
