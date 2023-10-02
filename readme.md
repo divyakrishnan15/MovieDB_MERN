@@ -95,5 +95,45 @@ THEN we are presented with two inputs for an email address and a password and lo
 - ![alt text](./client/public/images/login.png)
 
 
+```
+WHEN we enter a valid email address and create a password and click on the signup button
+THEN the respective user account is created and I am logged in to the site
+THEN the menu options change categories of movies,ordered history, and Logout
+THEN we can search the movies based on the catergories
+```
+
+- ![alt text](./client/public/images/home1.png)
+
+
+```
+THEN we are presented with five different Categories of movies 
+Click on the desired categories 
+Then we are presented with the movies belonging to that specific category
+```
+
+- Action Category
+
+- ![alt text](./client/public/images/action.png)
+
+
+- Kids Category
+
+- ![alt text](./client/public/images/kids.png)
+
+- Thriller Category
+
+- ![alt text](./client/public/images/thriller.png)
+
+
+- Romance Category
+
+- ![alt text](./client/public/images/romance.png)
+
+- Scienec-Fiction Category
+
+- ![alt text](./client/public/images/scific.png)
+
+
+
 
 
