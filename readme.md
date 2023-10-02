@@ -56,7 +56,7 @@ The repository name is **MovieDB_MERN**
   - npm init
   - npm run develop ( cd to the correct directory)
 
-  ![alt text](../images/pro3.png)
+  ![alt text](./client/public/images/pro3.png)
 
   - The URL of the functional deployed application is
 
@@ -74,7 +74,7 @@ THEN we are presented with a menu with different categories of movies  and Login
 WHEN we click on the signup button
 THEN we are presented with an input field to enter the details
 Once we enter all the details and click on submit ,it creates a new account for you and will login into the account.
-- ![alt text](./assets/signup.png)
+- ![alt text](./client/public/images/signup.png)
 
 ```
 
