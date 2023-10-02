@@ -15,5 +15,9 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "@iconscout/react-unicons": "^2.0.2",
+    "@iconscout/unicons": "^4.0.8"
   }
 }

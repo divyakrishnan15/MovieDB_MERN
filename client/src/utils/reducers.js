@@ -8,10 +8,14 @@ import {
   UPDATE_CATEGORIES,
   UPDATE_CURRENT_CATEGORY,
   CLEAR_CART,
-  TOGGLE_CART
+  TOGGLE_CART,
+  TOGGLE_THEME
 } from "./actions";
 
 export const reducer = (state, action) => {
+
+  const newDarkTheme = !state.darkTheme;
+
   switch (action.type) {
     case UPDATE_PRODUCTS:
       return {
@@ -79,6 +83,13 @@ export const reducer = (state, action) => {
         ...state,
         currentCategory: action.currentCategory
       }
+
+    case TOGGLE_THEME: {
+        return {
+          ...state,
+          darkTheme: newDarkTheme,
+        }
+    }
 
     default:
       return state;

@@ -1,10 +1,19 @@
-import React from "react";
+// import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import React, { useReducer } from 'react';
+import { useTheme } from '../../utils/ThemeContext';
+import { reducer } from '../../utils/reducers';
+import { TOGGLE_THEME } from '../../utils/actions';
 
 function Nav() {
+  
 
   function showNavigation() {
+    
+
+
+
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
@@ -19,12 +28,13 @@ function Nav() {
               Logout
             </a>
           </li>
+          
         </ul>
       );
     } else {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
+          <li className="mx-2">
             <Link to="/signup">
               Signup
             </Link>
@@ -34,12 +44,15 @@ function Nav() {
               Login
             </Link>
           </li>
+          <li>
+          </li>
         </ul>
       );
     }
   }
 
   return (
+    <>
     <header className="flex-row px-1">
       <h1>
         <Link to="/">
@@ -52,6 +65,7 @@ function Nav() {
         {showNavigation()}
       </nav>
     </header>
+    </>
   );
 }
 
