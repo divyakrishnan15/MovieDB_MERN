@@ -56,7 +56,7 @@ The repository name is **MovieDB_MERN**
   - npm init
   - npm run develop ( cd to the correct directory)
 
-  ![alt text](./assets/pro3.png)
+  ![alt text](../images/pro3.png)
 
   - The URL of the functional deployed application is
 
