@@ -1,12 +1,15 @@
 :root {
   --primary: #232F3E;
-  --secondary: #F3A847;
+  /* --secondary: #F3A847; */
+  --secondary:#6646FF;
+  /* --secondary:#4666FF; */
   --tertiary: #B12704;
   --light: #fafafa;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
+  --spacing-three: calc(1rem);
 }
 
 * {
@@ -99,8 +102,17 @@ button {
   background-color: var(--secondary);
 }
 
+/* a:hover {
+  color: #111;
+  background: #39ff14;
+  box-shadow: 0 0 50px #39ff14;
+} */
+
 button:hover {
   opacity: .8;
+  color: #111;
+  background: #39ff14;
+  box-shadow: 0 0 50px #39ff14;
 }
 
 button[disabled] {
@@ -162,6 +174,11 @@ input:focus {
 .mx-2 {
   margin-right: var(--spacing-two);
   margin-left: var(--spacing-two);
+}
+
+.mx-3 {
+  margin-right: var(--spacing-three);
+  margin-left: var(--spacing-three);
 }
 
 .my-1 {

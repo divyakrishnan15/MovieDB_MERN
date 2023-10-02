@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useContext,useReducer} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
@@ -7,6 +7,18 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+
+// import {themeContext} from './components/Theme/useThemeReducer'
+import ThemeComponent from './components/Theme/ThemeComponent';
+import ThemeProvider from './utils/ThemeContext';
+
+import { useTheme } from './utils/ThemeContext';
+
+// Import our reducer
+import { reducer } from './utils/reducers';
+
+// Import our action
+import { TOGGLE_THEME } from './utils/actions';
 
 import Home from './pages/Home';
 import Detail from './pages/Detail';
@@ -37,11 +49,20 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
+
 function App() {
+
+
   return (
+    
     <ApolloProvider client={client}>
+      
+
       <Router>
         <div>
+        <ThemeProvider>
+          <ThemeComponent/>
           <StoreProvider>
             <Nav />
             <Routes>
@@ -75,9 +96,11 @@ function App() {
               />
             </Routes>
           </StoreProvider>
+          </ThemeProvider>
         </div>
       </Router>
     </ApolloProvider>
+    
   );
 }
 

@@ -4,9 +4,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+// import {UseThemeReducer} from './components/Theme/useThemeReducer'
+
 ReactDOM.render(
   <React.StrictMode>
+    {/* <UseThemeReducer> */}
     <App />
+    {/* </UseThemeReducer> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
