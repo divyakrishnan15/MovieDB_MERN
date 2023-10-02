@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Raja rani",
+    "description": "Romance Movie1",
+    "image": "Romance1",
+    "price": 10.99,
+    "quantity":10,
+    "category":"Romance"
+  },
+  {
+    "name": "Padaiyappa",
+    "description": "Romance Movie1",
+    "image": "Romance2",
+    "price": 10.99,
+    "quantity":10,
+    "category":"Romance"
+  },
+  {
+    "name": "Aranmanai",
+    "description": "Horror Movie1",
+    "image": "Horror1",
+    "price": 10.99,
+    "quantity":10,
+    "category":"Horror"
+  }
+ ]

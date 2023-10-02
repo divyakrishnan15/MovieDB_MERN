@@ -1,46 +1,46 @@
 const db = require('./connection');
-const { User, Product, Category } = require('../models');
+const { User, Movie, Category } = require('../models');
 
 db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
+    { name: 'Action' },
+    { name: 'Kids' },
+    { name: 'Thriller' },
+    { name: 'Romance' },
+    { name: 'Scifi' }
   ]);
 
   console.log('categories seeded');
 
-  await Product.deleteMany();
+  await Movie.deleteMany();
 
-  const products = await Product.insertMany([
+  const movies = await Movie.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'Speed',
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+      image: 'action_speed.png',
       category: categories[0]._id,
       price: 2.99,
       quantity: 500
     },
     {
-      name: 'Canned Coffee',
+      name: 'Shangai Knights',
       description:
         'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
+      image: 'action_shangaiknights.png',
       category: categories[0]._id,
       price: 1.99,
       quantity: 500
     },
     {
-      name: 'Toilet Paper',
-      category: categories[1]._id,
+      name: 'Shangai Noon',
+      category: categories[0]._id,
       description:
         'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
+      image: 'action_shangainoon.png',
       price: 7.99,
       quantity: 20
     },
@@ -126,7 +126,7 @@ db.once('open', async () => {
     }
   ]);
 
-  console.log('products seeded');
+  console.log('Movies seeded');
 
   await User.deleteMany();
 
@@ -137,7 +137,7 @@ db.once('open', async () => {
     password: 'password12345',
     orders: [
       {
-        products: [products[0]._id, products[0]._id, products[1]._id]
+        movies: [movies[0]._id, movies[0]._id, movies[1]._id]
       }
     ]
   });

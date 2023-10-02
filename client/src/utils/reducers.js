@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 import {
-  UPDATE_PRODUCTS,
+  UPDATE_MOVIES,
   ADD_TO_CART,
   UPDATE_CART_QUANTITY,
   REMOVE_FROM_CART,
@@ -13,40 +13,40 @@ import {
 
 export const reducer = (state, action) => {
   switch (action.type) {
-    case UPDATE_PRODUCTS:
+    case UPDATE_MOVIES:
       return {
         ...state,
-        products: [...action.products],
+        movies: [...action.movies],
       };
 
     case ADD_TO_CART:
       return {
         ...state,
         cartOpen: true,
-        cart: [...state.cart, action.product],
+        cart: [...state.cart, action.movie],
       };
 
     case ADD_MULTIPLE_TO_CART:
       return {
         ...state,
-        cart: [...state.cart, ...action.products],
+        cart: [...state.cart, ...action.movies],
       };
 
     case UPDATE_CART_QUANTITY:
       return {
         ...state,
         cartOpen: true,
-        cart: state.cart.map(product => {
-          if (action._id === product._id) {
-            product.purchaseQuantity = action.purchaseQuantity
+        cart: state.cart.map(movie => {
+          if (action._id === movie._id) {
+            movie.purchaseQuantity = action.purchaseQuantity
           }
-          return product
+          return movie
         })
       };
 
     case REMOVE_FROM_CART:
-      let newState = state.cart.filter(product => {
-        return product._id !== action._id;
+      let newState = state.cart.filter(movie => {
+        return movie._id !== action._id;
       });
 
       return {
@@ -85,6 +85,6 @@ export const reducer = (state, action) => {
   }
 };
 
-export function useProductReducer(initialState) {
+export function useMovieReducer(initialState) {
   return useReducer(reducer, initialState)
 }

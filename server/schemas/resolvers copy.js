@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Movie, Category, Order } = require('../models');
+const { User, Product, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
@@ -10,7 +10,7 @@ const resolvers = {
     },
 
 
-    movies: async (parent, { category, name }) => {
+    products: async (parent, { category, name }) => {
       const params = {};
       if (category) {
         params.category = category;
@@ -20,19 +20,19 @@ const resolvers = {
           $regex: name,
         };
       }
-      return await Movie.find(params).populate('category');
+      return await Product.find(params).populate('category');
     },
 
 
-    movie: async (parent, { _id }) => {
-      return await Movie.findById(_id).populate('category');
+    product: async (parent, { _id }) => {
+      return await Product.findById(_id).populate('category');
     },
 
 
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.movies',
+          path: 'orders.products',
           populate: 'category',
         });
         user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
@@ -45,7 +45,7 @@ const resolvers = {
     order: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.movies',
+          path: 'orders.products',
           populate: 'category',
         });
         return user.orders.id(_id);
@@ -57,20 +57,20 @@ const resolvers = {
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
       // We map through the list of products sent by the client to extract the _id of each item and create a new Order.
-      await Order.create({ movies: args.movies.map(({ _id }) => _id) });
+      await Order.create({ products: args.products.map(({ _id }) => _id) });
       const line_items = [];
-      for (const movie of args.movies) {
+      for (const product of args.products) {
         line_items.push({
           price_data: {
             currency: 'usd',
-            movie: {
-              name: movie.name,
-              description: movie.description,
-              images: [`${url}/images/${movie.image}`],
+            product_data: {
+              name: product.name,
+              description: product.description,
+              images: [`${url}/images/${product.image}`],
             },
-            unit_amount: movie.price * 100,
+            unit_amount: product.price * 100,
           },
-          quantity: movie.purchaseQuantity,
+          quantity: product.purchaseQuantity,
         });
       }
       const session = await stripe.checkout.sessions.create({
@@ -94,10 +94,10 @@ const resolvers = {
     },
 
 
-    addOrder: async (parent, { movies }, context) => {
+    addOrder: async (parent, { products }, context) => {
       console.log(context);
       if (context.user) {
-        const order = new Order({ movies });
+        const order = new Order({ products });
         await User.findByIdAndUpdate(context.user._id, {
           $push: { orders: order },
         });
@@ -119,7 +119,7 @@ const resolvers = {
 
     updateProduct: async (parent, { _id, quantity }) => {
       const decrement = Math.abs(quantity) * -1;
-      return await Movie.findByIdAndUpdate(
+      return await Product.findByIdAndUpdate(
         _id,
         { $inc: { quantity: decrement } },
         { new: true }
