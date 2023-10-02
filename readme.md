@@ -16,6 +16,7 @@
 </p>
  
 </div>
+
 # Description 
 Introducing our comprehensive online movie database and e-commerce platform, where you can easily purchase your favorite films. Powered by the MERN Stack, our full-stack web application leverages the capabilities of React and Redux for a seamless user experience. With integrated Stripe payment processing, you can complete your transactions even in the event of a connection interruption. Additionally, our platform allows users to access their order history outside of the checkout process and offers convenient account creation and login functionalities. Explore, shop, and enjoy a hassle-free movie-buying experience with us.
 
