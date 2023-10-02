@@ -151,11 +151,11 @@ Then we are presented to Card Information payment page
 THE purchased movies are can be seen in the ordered history
 
 ```
-![alt text](./client/public/images/stripe.png)
+![alt text](./client/public/images/stripe.jpg)
 
-![alt text](./client/public/images/order.png)
+![alt text](./client/public/images/order.jpg)
 
-![alt text](./client/public/images/orderhist.png)
+![alt text](./client/public/images/orderhist.jpg)
 
 
 
