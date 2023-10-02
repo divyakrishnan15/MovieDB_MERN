@@ -72,10 +72,28 @@ Below are the screenshots of the walkthrough steps the user (the avid reader) wh
 GIVEN a Movies DB engine
 WHEN we load the engine
 THEN we are presented with a menu with different categories of movies  and Login/Signup and Cart(where all movies to be purchased are added)
-WHEN we click on the signup button
-THEN we are presented with an input field to enter the details
-Once we enter all the details and click on submit ,it creates a new account for you and will login into the account.
+
+```
+
+- ![alt text](./client/public/images/home.jpg)
+
+```
+WHEN we click on the Login/Signup menu option
+THEN a modal appears on the screen with a toggle between the option to log in or sign up
+WHEN the toggle is set to Signup
+THEN we are presented with three inputs for a username, an email address, and a password, and a signup button
+
+```
+
 - ![alt text](./client/public/images/signup.png)
 
 ```
+WHEN the toggle is set to Login
+THEN we are presented with two inputs for an email address and a password and login button
+
+```
+- ![alt text](./client/public/images/login.png)
+
+
+
 
