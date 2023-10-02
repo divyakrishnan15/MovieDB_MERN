@@ -27,7 +27,7 @@ The repository name is **MovieDB_MERN**
 - [Technologies Used](#technologies-used)
 - [Deployment](#deployment)
 - [Usage](#usage)
-- [References](#references)
+- [Contribution](#contribution)
 - [License](#license)
 
 ## Technologies Used
@@ -65,7 +65,7 @@ The repository name is **MovieDB_MERN**
 
 - See the below the example of MongoDB database using MongoDB Atlas:-
 
-  ![alt text](./assets/mongodb.png)
+  ![alt text](./client/public/images/mongodb.png)
 
 - The URL of the functional deployed application is 
 
@@ -158,6 +158,20 @@ THE purchased movies are can be seen in the ordered history
 ![alt text](./client/public/images/orderhist.jpg)
 
 
+# Contribution
+
+```
+Divya Krishnan
+Alekhya Erikipati
+Joshua Crawford
+Yago Marcelo Santana Lira
+Peter Bhagoutie
+
+```
+
+# License
+
+This project is licensed under the terms of the MIT license.
 
 
 
