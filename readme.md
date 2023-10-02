@@ -56,3 +56,25 @@ The repository name is **MovieDB_MERN**
   - npm init
   - npm run develop ( cd to the correct directory)
 
+  ![alt text](./assets/pro3.png)
+
+  - The URL of the functional deployed application is
+
+  ## Usage
+
+Below are the screenshots of the walkthrough steps the user (the avid reader) who want to search for new books to so that the user can keep a list of books to purchase.
+
+- As the user of the application :-
+
+```
+
+GIVEN a Movies DB engine
+WHEN we load the engine
+THEN we are presented with a menu with different categories of movies  and Login/Signup and Cart(where all movies to be purchased are added)
+WHEN we click on the signup button
+THEN we are presented with an input field to enter the details
+Once we enter all the details and click on submit ,it creates a new account for you and will login into the account.
+- ![alt text](./assets/signup.png)
+
+```
+
