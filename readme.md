@@ -59,7 +59,15 @@ The repository name is **MovieDB_MERN**
 
   ![alt text](./client/public/images/pro3.png)
 
-  - The URL of the functional deployed application is
+## Deployment
+
+- The application has been deployed to Heroku with a MongoDB database using MongoDB Atlas.
+
+- See the below the example of MongoDB database using MongoDB Atlas:-
+
+  ![alt text](./assets/mongodb.png)
+
+- The URL of the functional deployed application is 
 
   ## Usage
 
@@ -75,7 +83,7 @@ THEN we are presented with a menu with different categories of movies  and Login
 
 ```
 
-- ![alt text](./client/public/images/home.jpg)
+ ![alt text](./client/public/images/home.jpg)
 
 ```
 WHEN we click on the Login/Signup menu option
@@ -85,7 +93,7 @@ THEN we are presented with three inputs for a username, an email address, and a 
 
 ```
 
-- ![alt text](./client/public/images/signup.png)
+ ![alt text](./client/public/images/signup.png)
 
 ```
 WHEN the toggle is set to Login
@@ -102,7 +110,7 @@ THEN the menu options change categories of movies,ordered history, and Logout
 THEN we can search the movies based on the catergories
 ```
 
-- ![alt text](./client/public/images/home1.png)
+ ![alt text](./client/public/images/home1.png)
 
 
 ```
@@ -113,25 +121,41 @@ Then we are presented with the movies belonging to that specific category
 
 - Action Category
 
-- ![alt text](./client/public/images/action.png)
+ ![alt text](./client/public/images/action.png)
 
 
 - Kids Category
 
-- ![alt text](./client/public/images/kids.png)
+ ![alt text](./client/public/images/kids.png)
 
 - Thriller Category
 
-- ![alt text](./client/public/images/thriller.png)
+ ![alt text](./client/public/images/thriller.png)
 
 
 - Romance Category
 
-- ![alt text](./client/public/images/romance.png)
+![alt text](./client/public/images/romance.png)
 
 - Scienec-Fiction Category
 
-- ![alt text](./client/public/images/scific.png)
+![alt text](./client/public/images/scific.png)
+
+
+
+```
+When we press on the 'add to cart' the movies gets added to the cart
+Then we are taken to the cart
+Then we are proceeded to the checkout
+Then we are presented to Card Information payment page 
+THE purchased movies are can be seen in the ordered history
+
+```
+![alt text](./client/public/images/stripe.png)
+
+![alt text](./client/public/images/order.png)
+
+![alt text](./client/public/images/orderhist.png)
 
 
 
