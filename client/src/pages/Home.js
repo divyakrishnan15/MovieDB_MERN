@@ -5,6 +5,7 @@ import Cart from "../components/Cart";
 import { useTheme } from '../utils/ThemeContext';
 import { reducer } from '../utils/reducers';
 import { TOGGLE_THEME } from '../utils/actions';
+// import '../index.css'
 
 const Home = () => {
   const initialState = useTheme();
@@ -15,9 +16,9 @@ const Home = () => {
   const themeStyles = {
     background: state.darkTheme
       ? 'white'
-      : 'black',
+      : '#232F3E',
     height:'300vh',
-    width:'100vw',
+    width:'calc(100% - 0px) !important',
     color: state.darkTheme ? 'black' : 'white',
   };
 

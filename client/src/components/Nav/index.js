@@ -2,17 +2,12 @@
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 import React, { useReducer } from 'react';
-import { useTheme } from '../../utils/ThemeContext';
-import { reducer } from '../../utils/reducers';
-import { TOGGLE_THEME } from '../../utils/actions';
 
 function Nav() {
   
 
   function showNavigation() {
     
-
-
 
     if (Auth.loggedIn()) {
       return (

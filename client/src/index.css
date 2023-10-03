@@ -1,5 +1,5 @@
 :root {
-  --primary: #232F3E;
+  --primary: #674EA7;
   /* --secondary: #F3A847; */
   --secondary:#6646FF;
   /* --secondary:#4666FF; */
@@ -10,6 +10,7 @@
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
   --spacing-three: calc(1rem);
+  /* --primary:#232F3E; */
 }
 
 * {
@@ -90,6 +91,11 @@ header a {
   color: var(--light);
 }
 
+li{
+  text-decoration: none;
+  list-style: none;
+}
+
 button {
   font-size: 1rem;
   text-decoration: none;
@@ -147,8 +153,11 @@ input:focus {
 }
 
 .container {
-  width: 85%;
-  max-width: 1200px;
+  /* width:calc(100vw - 1px); */
+  width:100vw !important;
+  height:400vh !important;
+  min-height: 100vh;
+  /* max-width: 1200px; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -212,8 +221,14 @@ input:focus {
 }
 
 .card {
-  width: 25%;
+  width:400px;
+  height:700px;
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+  /* text-shadow: 2px 2px; */
+  /* width: 25%; */
+  /* height:300px; */
   text-align: center;
+  margin:10px;
 }
 
 .error-text {
