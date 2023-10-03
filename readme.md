@@ -117,12 +117,14 @@ THEN we can search the movies based on the catergories
 ```
 WHEN I click on toggle dark theme button, I can switch to dark and light theme.
 
+```
+
 ![image](https://github.com/divyakrishnan15/MovieDB_MERN/assets/40469923/8bfcaa09-4a48-472f-ac05-835ef050c8a3)
 
 ![image](https://github.com/divyakrishnan15/MovieDB_MERN/assets/40469923/cfadfcde-fc60-46af-a926-6e40fea84b4d)
 
 
-```
+
 ```
 THEN we are presented with five different Categories of movies 
 Click on the desired categories 
